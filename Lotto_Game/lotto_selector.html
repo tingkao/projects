@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lotto649</title>
+  <style type="text/css">
+    html,body{
+      margin: 0px;
+      padding: 0px;
+      background-color: #ccc;
+    }
+    *{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .wrap{
+      height: 60%;
+      padding: 40px;
+      position: absolute;
+      left: 50%;
+      top: 100px;
+      transform: translateX(-50%);
+      background-color: #fff7e8;
+      box-shadow: 0 0 20px -5px;
+      border-radius: 10px;
+      text-align: center;
+      min-width: 600px;
+    }
+    .wrap2{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 120px;
+      background-color: #ddd;
+      padding: 40px 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px -2px;
+    }
+    .wrap2:hover{
+      box-shadow: 0 0 20px -5px;
+    }
+    .rule_text {
+      margin: auto;
+      width: initial;
+      margin: 10px;
+      font-size: 26px;
+    }
+    button{
+      font-size: 22px;
+    }
+    .lottery-nums{
+      overflow: hidden;
+      text-align: center;
+    }
+    .lottery-nums > div{
+      display: block; 
+      float: left;
+      width: 50px; height: 50px;
+      border: 1px solid #999;
+      background-color: #fff;
+      color: #555;
+      font-size: 20px;
+      text-align: center;
+      line-height: 48px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border-radius: 100%;
+      cursor: pointer;
+      user-select: none;
+      box-sizing: border-box;
+    }
+    .lottery-nums > div:nth-child(10n){
+      margin-right: 0px;
+    }
+    .lottery-nums > div:hover{
+      border-color: #bbb;
+      border: solid 4px;
+      line-height: 42px;
+    }
+
+    .lottery-nums .selected{
+      background-color: green;
+      color: #fff;
+    }
+
+    .lottery-nums .highlight{
+      background-color: red;
+      color: #fff;
+    }
+
+    .lottery-nums .selected.highlight{
+      background-color: yellow;
+      color: #333;
+    }
+
+    .lottery-nums > div{
+      background-color: #ffba19;
+      color: #000;
+      cursor: pointer;
+    }
+
+    p{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 440px;
+      
+
+    }
+    p > button{
+      width: 100px;
+      margin: 10px;
+      border-radius: 5px;
+      background-color: #fffbd1;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    p > button:hover{
+      transform: scale(1.2);
+    }
+    .title{
+      font-size: 30px;
+      margin-bottom: 20px;
+      align-content: center;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .lottery-result, .bingle{
+      display: none;
+      width: 240px;
+      margin: auto;
+      text-align: left;
+    }
+    .header{
+      position: absolute;
+      height: 60px;
+    }
+    header{
+      font-size: 0px;
+      background-color: #eee;
+      margin-bottom: 50px;
+      cursor: pointer;
+    }
+    header > .rule , header > .gamer{
+      display: inline-block;
+      width: 50%;
+      font-size: 24px;
+      text-align: center;
+      margin: 0px;
+      padding: 20px 0px;
+
+    }
+    header > .rule{
+      border-right: solid 1px #ccc;
+      box-sizing: border-box;
+    }
+    header > .gamer{
+      border-left: solid 1px #ccc;
+      box-sizing: border-box;
+    }
+    header > .rule:hover , header > .gamer:hover{
+      background-color: #555 !important;
+      color: #fff !important;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h3 class="rule">How to Play</h3>
+    <h3 class="gamer">Let's Go!</h3>
+  </header>
+
+  <div class="wrap">
+
+    <div class="title">Choose Your 6 lucky numbers</div>
+    <div class="lottery-nums"></div>
+    <div class="lottery-result">Draw Result：<span style="left: 3px"></span></div>
+    <div class="bingle">Winning Numbers：<span style="left: 12px"></span></div>
+
+    <p>
+      <button class="btn-lottery">Check!</button>
+      <button class="reset">Reset</button>
+    </p>
+
+  </div>
+
+  <div class="wrap2">
+    <h3 class="rule_text">●  Click numbers for selection/deselection</h3>
+    <h3 class="rule_text">●  Choose 6 numbers and click "Check!"</h3>
+    <h3 class="rule_text">●  You can apply the same numbers for next "Check!"</h3>
+  </div>
+
+  <script src="scripts/jquery-3.1.0.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+      $('.rule').trigger('click');
+    })
+  // alert('Game Rule：Select 6 numbers and click "Check!"')
+
+  // generate 49 btn
+  for( var i = 1; i < 50; i++ ){
+    
+    if(i <= 9){
+      $('.lottery-nums').append('<div>0' + i + '</div>')
+    }
+    else{
+      $('.lottery-nums').append('<div>' + i + '</div>');
+    }
+  }
+
+  // 1. 為數字按鈕加入事件
+  $('.lottery-nums div').on('click', function(){
+    if($('.selected').length<6)
+      $(this).toggleClass('selected');
+    else if ($('.selected').length == 6){
+      if ($(this).hasClass('selected')){
+        $(this).toggleClass('selected');
+      }
+      
+    }
+
+
+  });
+
+
+  var lottery = [];
+  var yellowBall = [];
+
+
+  // 重設按鈕
+  $('.reset').on('click', function(){
+    yellowBall = []
+    $('.title').text('Try Again!')
+    $('.lottery-result').css('display','none');
+    $('.bingle').css('display','none');
+    $('.lottery-nums div').removeClass('selected , highlight ');
+    while( lottery.length < 6 ){
+      number = parseInt( Math.random() * 49 + 1, 10 );
+
+      if( lottery.indexOf( number ) === -1 ){
+        lottery.push( number );
+      }
+    }
+    $('.lottery-result > span').text('')
+
+  });
+
+
+  // 兌獎按鈕
+  var bingle_num
+
+  $('.btn-lottery').on('click', function(){
+    yellowBall = []
+    $('.lottery-result').css('display','block')
+    $('.lottery-nums div').removeClass('highlight');
+    lottery = []
+    while( lottery.length < 6 ){
+      number = parseInt( Math.random() * 49 + 1, 10 );
+
+      if( lottery.indexOf( number ) === -1 ){
+        lottery.push( number );
+      }
+    // var bingle = parseInt($('.selected.highlight').text())
+    // console.log(bingle)
+
+    // $('.bingle').text(bingle);
+    }
+
+
+    for ( i = 0 ; i < lottery.length ; i ++ ){
+      $('.lottery-nums > div').eq(lottery[i]-1).addClass('highlight')
+    };
+    $('.lottery-result > span').text( lottery );
+
+    if ($('.selected.highlight').length >= 1){
+      $('.title').text('What good luck!')
+    }
+    else if($('.selected.highlight').length == 6){
+      $('.title').text('You Hit the Jackpot！')
+
+    }
+    else{
+      $('.title').text('Try Again!')
+    }
+
+    // var yellowBall = []
+    // yellowBall.push($('.selected.highlight').text())
+    // console.log(yellowBall)
+    console.log(lottery)
+    console.log(lottery.indexOf( 23 ))
+
+
+    for(var i=1 ; i<50 ; i++){
+      if(lottery.indexOf( i ) >= 0 && $('.lottery-nums > div').eq(i - 1).hasClass('selected')){
+        yellowBall.push(i)
+        
+      }
+    }
+    console.log(yellowBall)
+    if ($('.selected.highlight').length >= 1){
+      $('.bingle').text('Winning Numbers：' +  yellowBall)
+    }
+
+    if ($('.selected.highlight').length >= 1){
+      $('.bingle').css('display','block')
+      $('.bingle > span').text( yellowBall );
+    }
+    else if($('.selected.highlight').length == 0){
+      $('.bingle').css('display','none')
+    }
+
+  });
+
+  $('.rule').on('click',function(){
+    $('.wrap').css('display','none')
+    $('.wrap2').css('display','block')
+    $(this).css({'background-color':'#333', 'color':'#fff'})
+    $(this).siblings().css({'background-color':'#eee', 'color':'#000'})
+  })
+
+  $('.gamer').on('click',function(){
+    $('.wrap').css('display','block')
+    $('.wrap2').css('display','none')
+    $(this).css({'background-color':'#333', 'color':'#fff'})
+    $(this).siblings().css({'background-color':'#eee', 'color':'#000'})
+
+  })
+
+  </script>
+
+</body>
+</html>
