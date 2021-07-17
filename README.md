@@ -9,7 +9,7 @@ side_projects
 
 ### Message Board
 - Dynamic website with XAMPP https://www.apachefriends.org/index.html
-- A full stack website implemented by HTML/CSS/JavaScript/php
+- A full stack website implemented by HTML/CSS/JavaScript/PHP
 - APIs handling for user registions, sign in, sign out
 - Manipulated user data in Database by SQL
 - Handled basic web security from XSS, SQL Injection and CSRF cyber attacks
