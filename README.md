@@ -19,7 +19,7 @@ side_projects
 ### Twitch Top Game Stream
 - An application that will display the 5 most popular games at present with Twitch API
 - Personal side project completed April 2021
-- [Page Demo]
+- [Page Demo](https://tingkao.github.io/side_projects/TwitchGameAPI/index.html)
 
 ### Todo List
 - An application ruled as real-world lotto game implemented by HTML/CSS/JavaScript
