@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f7f7f7;
+  position: relative;
+}
+header {
+  background-color: #ffc4c6;
+  color: #a20606;
+  font-weight: 500;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+form.comment__add > * {
+  display: block;
+  margin-bottom: 20px;
+}
+form.comment__add > textarea {
+  width: 100%;
+  border: solid 1px #bddfff;
+  padding: 5px;
+  font-size: 18px;
+  /* margin-top: 20px; */
+}
+.nickname {
+  padding: 5px;
+  border: solid 1px #bddfff;
+  font-size: 18px;
+}
+.wrap {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  margin: 20px auto;
+  border-radius: 10px;
+  padding: 20px 30px;
+}
+.wrap h1 {
+  margin-bottom: 20px;
+}
+.submit-btn {
+  margin-left: 100%;
+  transform: translateX(-100%);
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: solid 1px #bddfff;
+  background-color: #fff;
+  /* margin-top: 20px; */
+}
+.submit-btn:hover {
+  background-color: #bddfff;
+  cursor: pointer;
+}
+.comment__hr {
+  width: 98%;
+  height: 2px;
+  margin: 40px auto 20px auto;
+  background-color: #e8e8e8;
+  margin-bottom: 20px;
+}
+.delete-btn, .edit-btn, .manage_status-btn {
+  text-decoration: none;
+  color: #bbb;
+}
+.delete-btn:hover, .edit-btn:hover, .manage_status-btn:hover {
+  text-decoration: none;
+  color: #092946;
+}
+.card {
+  /* display: flex; */
+  position: relative;
+  padding: 10px;
+  margin-bottom: 20px;
+  min-height: 80px;
+  /* box-shadow: 0 0 15px #aaa; */
+  /* border: solid 1px black; */
+
+}
+.card-info {
+  display: flex;
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+.card-manage.card-info {
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  /* align-items: flex-end; */
+  /* display: block; */
+  font-size: 22px;
+  /* text-align: left; */
+}
+
+.card-info * {
+  align-self: center;
+  margin-right: 8px;
+}
+.card-manage.card-info * {
+  align-self: flex-start;
+}
+.card-user {
+  color: #5c9edc;
+}
+.card-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #a0a0a0;
+}
+.card-time {
+  color: #a0a0a0;
+}
+.card-avatar {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e4f0fb;
+  /* margin-right: 10px; */
+}
+.card-manage.card-avatar {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card-member_status[data-status="banned"] span {
+  color: red;
+}
+.card-member_status[data-status="manager"] span {
+  color: green;
+}
+.content {
+  margin-left: 60px;
+  padding-right: 80px;
+  white-space: pre-wrap;
+}
+.card-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.member-btn,
+.member-logout-btn {
+  position: absolute;
+  right: 30px;
+  top: 34px;
+}
+.member-btn a,
+.member-logout-btn a  {
+  /* margin-left: 100%; */
+  /* transform: translateX(-100%); */
+  width: 100%;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: solid 1px #bddfff;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+
+}
+.member-btn a:hover,
+.member-logout-btn a:hover  {
+  background-color: #bddfff;
+  color: #fff;
+}
+
+form.register__info label {
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  /* width: 300px; */
+}
+form.register__info input {
+  position: absolute;
+  left: 120px;
+  top: 0;
+}
+/* 會員登入 */
+section {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  width: 520px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding: 20px 30px;
+  text-align: center;
+  z-index: 3;
+}
+section h2 {
+  margin: 0;
+  padding: 0;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.comment__register-form label, 
+.comment__login-form label,
+.member_status__edit-form label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 30px;
+  margin-left: 80px;
+  text-align: left;
+}
+.comment__register-form input, 
+.comment__login-form input,
+.member_status__edit-form input {
+  padding: 8px;
+  border: solid 1px #bddfff;
+  border-radius: 5px;
+}
+
+.comment__register-form .handle-register-btn, 
+.comment__login-form .handle-login-btn,
+.member_status__edit-form .member_status__edit-btn {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: solid 1px #bddfff;
+  background-color: #fff;
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  right: 40px;
+  bottom: 50px;
+}
+.comment__register-form .handle-register-btn:hover, 
+.comment__login-form .handle-login-btn:hover,
+.member_status__edit-form .member_status__edit-btn:hover {
+  background-color: #bddfff;
+  color: white;
+  cursor: pointer;
+}
+.comment__register .to-login,
+.comment__login .to-register {
+  position: absolute;
+  bottom: 6px;
+  right: 8px;
+  font-size: 14px;
+  color: #aaa;
+}
+section .cancel {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  border: solid 1px #aaa;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #aaa;
+}
+.comment__register .to-login:hover,
+.comment__login .to-register:hover {
+  color: rgb(29, 119, 255);
+  cursor: pointer;
+}
+section .cancel:hover {
+  background-color: rgb(29, 119, 255);
+  border-color: none;
+  color: white;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+.dark_bgc {
+  background-color: rgba(0,0,0,0.5);
+  /* width: 100%;
+  height: 100%; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  /* top: calc( -50vh + 90%);
+  left: calc( -50vw + 50%); */
+}
+
+.pages_wrap {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.pages_wrap a {
+  text-decoration: none;
+  padding: 4px 10px;
+  margin: 10px;
+  border-color: #092946;
+  color:  #092946;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pages_wrap a:hover {
+  background-color: #092946;
+  color: white;
+}
+
+.pages_wrap a.active {
+  background-color: #092946;
+  color: white;
+}
+
+.member_status__edit-form .intro {
+  font-size: 12px;
+  margin-left: 0;
+  margin-top: 5px;
+  position: absolute;
+}
+.member_status__edit-form label {
+  margin-bottom: 20px;
+}
+.member_status__edit-form .member_status__edit-btn {
+  bottom: 37px;
+}
