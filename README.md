@@ -1,4 +1,4 @@
-side_projects
+samll_projects
 =============
 
 ### Lotto Game
