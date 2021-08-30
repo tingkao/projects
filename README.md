@@ -1,12 +1,6 @@
 small_projects
 =============
 
-### Lotto Game
-- An application ruled as real-world lotto game implemented by HTML/CSS/JavaScript
-- The user selects six numbers on the site and the rahdom main numbers will be drawn by the system 
-- Personal side project Completed in Oct 2019
-- [Page Demo](https://tingkao.github.io/small_projects/Lotto_Game/lotto_selector.html)
-
 ### Message Board
 - Dynamic website with XAMPP https://www.apachefriends.org/index.html
 - A full stack website implemented by HTML/CSS/JavaScript/PHP
@@ -21,12 +15,6 @@ small_projects
 - Personal side project completed April 2021
 - [Page Demo](https://tingkao.github.io/small_projects/TwitchGameAPI/index.html)
 
-### Todo List
-- An application ruled as real-world lotto game implemented by HTML/CSS/JavaScript
-- The user selects six numbers on the site and the rahdom main numbers will be drawn by the system 
-- Personal side project since March 2021
-- [Page Demo](https://tingkao.github.io/small_projects/TodoList/todo_list.html)
-
 ### Restaurant Website
 - A Restaurant Website demo implemented by HTML/CSS
 - Personal side project completed May 2021
@@ -36,3 +24,15 @@ small_projects
 - A Tourist Website demo implemented by HTML/CSS
 - Personal side project completed May 2021
 - [Page Demo](https://tingkao.github.io/small_projects/Tourist_Web/tourist_web_demo.html)
+
+### Todo List
+- An application ruled as real-world lotto game implemented by HTML/CSS/JavaScript
+- The user selects six numbers on the site and the rahdom main numbers will be drawn by the system 
+- Personal side project since March 2021
+- [Page Demo](https://tingkao.github.io/small_projects/TodoList/todo_list.html)
+
+### Lotto Game
+- An application ruled as real-world lotto game implemented by HTML/CSS/JavaScript
+- The user selects six numbers on the site and the rahdom main numbers will be drawn by the system 
+- Personal side project Completed in Oct 2019
+- [Page Demo](https://tingkao.github.io/small_projects/Lotto_Game/lotto_selector.html)
