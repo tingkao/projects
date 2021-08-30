@@ -5,7 +5,7 @@ side_projects
 - An application ruled as real-world lotto game implemented by HTML/CSS/JavaScript
 - The user selects six numbers on the site and the rahdom main numbers will be drawn by the system 
 - Personal side project Completed in Oct 2019
-- [Page Demo](https://tingkao.github.io/side_projects/Lotto_Game/lotto_selector.html)
+- [Page Demo](https://tingkao.github.io/samll_projects/Lotto_Game/lotto_selector.html)
 
 ### Message Board
 - Dynamic website with XAMPP https://www.apachefriends.org/index.html
@@ -19,20 +19,20 @@ side_projects
 ### Twitch Top Game Stream
 - An application that will display the 5 most popular games at present with Twitch API
 - Personal side project completed April 2021
-- [Page Demo](https://tingkao.github.io/side_projects/TwitchGameAPI/index.html)
+- [Page Demo](https://tingkao.github.io/samll_projects/TwitchGameAPI/index.html)
 
 ### Todo List
 - An application ruled as real-world lotto game implemented by HTML/CSS/JavaScript
 - The user selects six numbers on the site and the rahdom main numbers will be drawn by the system 
 - Personal side project since March 2021
-- [Page Demo](https://tingkao.github.io/side_projects/TodoList/todo_list.html)
+- [Page Demo](https://tingkao.github.io/samll_projects/TodoList/todo_list.html)
 
 ### Restaurant Website
 - A Restaurant Website demo implemented by HTML/CSS
 - Personal side project completed May 2021
-- [Page Demo](https://tingkao.github.io/side_projects/Restaurant_Web/restaurant.html)
+- [Page Demo](https://tingkao.github.io/samll_projects/Restaurant_Web/restaurant.html)
 
 ### Tourist Website
 - A Tourist Website demo implemented by HTML/CSS
 - Personal side project completed May 2021
-- [Page Demo](https://tingkao.github.io/side_projects/Tourist_Web/tourist_web_demo.html)
+- [Page Demo](https://tingkao.github.io/samll_projects/Tourist_Web/tourist_web_demo.html)
