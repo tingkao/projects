@@ -2,7 +2,7 @@ Projects
 =============
 
 ### Twitch Top Game Stream
-- An application that will display the 5 most popular games at present with Twitch API
+- An application that will display the 5 most popular games at present with **Twitch API**
 - Personal side project completed April 2021
 - [Page Demo](https://tingkao.github.io/projects/TwitchGameAPI/index.html)
 
