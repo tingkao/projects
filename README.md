@@ -26,8 +26,8 @@ Projects
 - [Page Demo](https://tingkao.github.io/projects/Tourist_Web/tourist_web_demo.html)
 
 ### Todo List
-- An application ruled as real-world lotto game implemented by HTML/CSS/JavaScript
-- The user selects six numbers on the site and the rahdom main numbers will be drawn by the system 
+- A Todo List application implemented by HTML/CSS/JavaScript
+- The user can Add/Delete/Mark the todolist
 - Personal side project since March 2021
 - [Page Demo](https://tingkao.github.io/projects/TodoList/todo_list.html)
 
