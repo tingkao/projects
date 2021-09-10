@@ -1,4 +1,4 @@
-small_projects
+Projects
 =============
 
 ### Message Board
